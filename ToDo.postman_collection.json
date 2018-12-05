@@ -8,9 +8,9 @@
 	},
 	"item": [
 		{
-			"name": "tasks",
+			"name": "food",
 			"request": {
-				"url": "http://localhost:3000/api/v001/tasks",
+				"url": "http://localhost:3000/api/v001/food",
 				"method": "GET",
 				"header": [],
 				"body": {},
@@ -19,9 +19,9 @@
 			"response": []
 		},
 		{
-			"name": "tasks/id",
+			"name": "food/id",
 			"request": {
-				"url": "http://localhost:3000/api/v001/tasks/{{id}}",
+				"url": "http://localhost:3000/api/v001/food/{{id}}",
 				"method": "GET",
 				"header": [],
 				"body": {},
@@ -30,9 +30,9 @@
 			"response": []
 		},
 		{
-			"name": "tasks/add",
+			"name": "food/add",
 			"request": {
-				"url": "http://localhost:3000/api/v001/tasks",
+				"url": "http://localhost:3000/api/v001/food",
 				"method": "POST",
 				"header": [
 					{
@@ -50,9 +50,9 @@
 			"response": []
 		},
 		{
-			"name": "tasks/id/update",
+			"name": "food/id/update",
 			"request": {
-				"url": "http://localhost:3000/api/v001/tasks/{{id}}",
+				"url": "http://localhost:3000/api/v001/food/{{id}}",
 				"method": "PATCH",
 				"header": [
 					{
@@ -70,9 +70,9 @@
 			"response": []
 		},
 		{
-			"name": "tasks/id/delete",
+			"name": "food/id/delete",
 			"request": {
-				"url": "http://localhost:3000/api/v001/tasks/{{id}}",
+				"url": "http://localhost:3000/api/v001/food/{{id}}",
 				"method": "DELETE",
 				"header": [
 					{
@@ -89,7 +89,7 @@
 		{
 			"name": "bad_request",
 			"request": {
-				"url": "http://localhost:3000/api/v001/tasks/{{id}}/delete",
+				"url": "http://localhost:3000/api/v001/food/{{id}}/delete",
 				"method": "GET",
 				"header": [
 					{
@@ -109,7 +109,7 @@
 		{
 			"name": "invalid_api",
 			"request": {
-				"url": "http://localhost:3000/api/v001/tasks/{{id}}",
+				"url": "http://localhost:3000/api/v001/food/{{id}}",
 				"method": "PATCH",
 				"header": [
 					{

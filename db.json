@@ -1,19 +1,33 @@
 {
-  "tasks": [
+  "food": [
     {
-      "id": "e69fcfb925bbf",
-      "text": "test",
+      "id": "1",
+      "name": "apple",
+      "cal": "20",
+      "prot": "10",
+      "carb": "3",
+      "fat": "2",
+      "text": "apple",
       "isCompleted": false
     },
     {
-      "id": "aef2c11f08ac",
-      "text": "3333333",
-      "isCompleted": false,
-      "test": "2222222"
+      "id": "2",
+      "name": "meet",
+      "cal": "200",
+      "prot": "20",
+      "carb": "2",
+      "fat": "10",
+      "text": "Свинина",
+      "isCompleted": false
     },
     {
-      "id": "7c0b9675a049b",
-      "text": "test",
+      "id": "3",
+      "name": "oatmeal",
+      "cal": "100",
+      "prot": "10",
+      "carb": "70",
+      "fat": "0.5",
+      "text": "Овсянка",
       "isCompleted": false
     },
     {
@@ -35,6 +49,29 @@
       "id": "c0aaec4a82c2d",
       "text": "Тестовая задача",
       "isCompleted": true
+    }
+  ],
+  "diet": [
+    {
+      "id": "diet1",
+      "food": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "id": "diet2",
+      "food": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "id": "diet0",
+      "food": [
+        "1"
+      ]
     }
   ]
 }

@@ -2,45 +2,51 @@ const router = require('express').Router();
 const db = require('../db/db');
 const { validate } = require('jsonschema');
 
-const newTask = text => ({
+const newFood = (name, text, cal, prot, carb, fat) => ({
   id: String(Math.random()
     .toString(16)
     .split('.')[1]),
+  name,
+  cal,
+  prot,
+  carb,
+  fat,
   text,
   isCompleted: false,
 });
 
 // router.use('/:id', (req, res, next) => {
-//   const task = db.get('tasks')
+//   const food = db.get('food')
 //     .find({ id: req.params.id })
 //     .value();
 //
-//   if (!task) {
-//     next(new Error('CAN_NOT_FIND_TASK'));
+//   if (!food) {
+//     next(new Error('CAN_NOT_FIND_food'));
 //   }
 // });
 
-// GET /tasks
+// GET /food
 router.get('/', (req, res) => {
-  const tasks = db.get('tasks').value();
-
-  res.json({ status: 'OK', data: tasks });
+  const food = db.get('food').value();
+  console.log('get food');
+  res.json({ status: 'OK', data: food });
 });
 
-// GET /tasks/:id
+
+// GET /food/:id
 router.get('/:id', (req, res) => {
-  const task = db
-    .get('tasks')
+  const food = db
+    .get('food')
     .find({ id: req.params.id })
     .value();
 
-  res.json({ status: 'OK', data: task });
+  res.json({ status: 'OK', data: food });
 });
 
-// POST /tasks
+// POST /food
 router.post('/', (req, res, next) => {
   // const requestBodySchema = {
-  //   id: 'path-task',
+  //   id: 'path-food',
   //   type: 'object',
   //   properties: { text: { type: 'string' } },
   //   required: ['text'],
@@ -51,22 +57,22 @@ router.post('/', (req, res, next) => {
   //   next(new Error('INVALID_API_FORMAT'));
   // }
 
-  const task = newTask(req.body.text);
+  const food = newFood(req.body.text);
 
-  console.log(task);
+  console.log(food);
 
   db
-    .get('tasks')
-    .push(task)
+    .get('food')
+    .push(food)
     .write();
 
-  res.json({ status: 'OK', data: task });
+  res.json({ status: 'OK', data: food });
 });
 
-// PATCH /tasks/:id
+// PATCH /food/:id
 router.patch('/:id', (req, res, next) => {
   // const requestBodySchema = {
-  //   id: 'path-task',
+  //   id: 'path-food',
   //   type: 'object',
   //   properties: {
   //     text: { type: 'string' },
@@ -80,22 +86,33 @@ router.patch('/:id', (req, res, next) => {
   //   next(new Error('INVALID_API_FORMAT'));
   // }
 
-  const task = db
-    .get('tasks')
+  const food = db
+    .get('food')
     .find({ id: req.params.id })
     .assign(req.body)
     .value();
 
   db.write();
 
-  res.json({ status: 'OK', data: task });
+  res.json({ status: 'OK', data: food });
 });
 
-// DELETE /tasks/:id
+// DELETE /food/:id
 router.delete('/:id', (req, res) => {
+  const foodItem = db
+    .get('food')
+    .find({ id: req.params.id });
+
   db
-    .get('tasks')
-    .remove({ id: req.params.id })
+    .get('diet')
+    .forEach(item => {
+      item.food.splice(item.food.indexOf(foodItem.value()), 1);
+    })
+    .write();
+
+  db
+    .get('food')
+    .remove(foodItem)
     .write();
 
   res.json({ status: 'OK' });
