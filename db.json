@@ -1,54 +1,76 @@
 {
   "food": [
+    [
+      "1",
+      "Яблоко",
+      "20",
+      "10",
+      "100",
+      "3",
+      "Здесь описание яблока",
+      ""
+    ],
+    [
+      "2",
+      "Груша",
+      "10",
+      "40",
+      "50",
+      "3",
+      "Здесь описание Груши",
+      ""
+    ],
+    [
+      "3",
+      "Молоко",
+      "15",
+      "20",
+      "1600",
+      "30",
+      "Здесь описание Молока",
+      ""
+    ]
+  ],
+  "foodObj": [
     {
       "id": "1",
-      "name": "apple",
+      "name": "Яблоко",
       "cal": "20",
       "prot": "10",
       "carb": "3",
       "fat": "2",
       "text": "apple",
-      "isCompleted": false
+      "buttons": ""
     },
     {
       "id": "2",
-      "name": "meet",
+      "name": "Мясо",
       "cal": "200",
       "prot": "20",
       "carb": "2",
       "fat": "10",
       "text": "Свинина",
-      "isCompleted": false
+      "buttons": ""
     },
     {
       "id": "3",
-      "name": "oatmeal",
+      "name": "Овсянка",
       "cal": "100",
       "prot": "10",
       "carb": "70",
       "fat": "0.5",
       "text": "Овсянка",
-      "isCompleted": false
+      "buttons": ""
     },
     {
-      "id": "4403f9e760997",
-      "text": "test",
-      "isCompleted": false
-    },
-    {
-      "id": "0ea7e3b0ddd65",
-      "text": "test",
-      "isCompleted": false
-    },
-    {
-      "id": "3d1d3310c5ea2",
-      "text": "test",
-      "isCompleted": false
-    },
-    {
-      "id": "c0aaec4a82c2d",
-      "text": "Тестовая задача",
-      "isCompleted": true
+      "id": "3asdq223r121",
+      "name": "Тестовая еда",
+      "cal": "10000",
+      "prot": "1000",
+      "carb": "7000",
+      "fat": "0.500",
+      "text": "ТестыТестыТесты ТестыТестыТесты ТестыТестыТесты ТестыТестыТесты ТестыТестыТестыТесты",
+      "buttons": ""
     }
   ],
   "diet": [
