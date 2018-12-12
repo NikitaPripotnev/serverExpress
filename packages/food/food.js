@@ -32,7 +32,7 @@ router.get('/', (req, res) => {
   res.json({ status: 'OK', data: food });
 });
 
-
+/*
 // GET /food/:id
 router.get('/:id', (req, res) => {
   const food = db
@@ -41,6 +41,17 @@ router.get('/:id', (req, res) => {
     .value();
 
   res.json({ status: 'OK', data: food });
+});
+*/
+// GET /food/:name
+router.get('/:name', (req, res) => {
+  const food = db
+    .get('food')
+    .find({ name: req.params.name })
+    .value();
+  const foodmass = { food };
+
+  res.json({ status: food ? 'OK' : 'BAD_REQUEST', data: foodmass });
 });
 
 // POST /food
