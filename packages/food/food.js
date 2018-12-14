@@ -2,18 +2,14 @@ const router = require('express').Router();
 const db = require('../db/db');
 const { validate } = require('jsonschema');
 
-const newFood = (name, text, cal, prot, carb, fat) => ({
-  id: String(Math.random()
-    .toString(16)
-    .split('.')[1]),
-  name,
-  cal,
-  prot,
-  carb,
-  fat,
-  text,
-  isCompleted: false,
-});
+const newFood = data => Object.assign(
+  {
+    id: String(Math.random()
+      .toString(16)
+      .split('.')[1]),
+  },
+  data
+);
 
 // router.use('/:id', (req, res, next) => {
 //   const food = db.get('food')
@@ -67,13 +63,13 @@ router.post('/', (req, res, next) => {
   // if (!validate(req.body, requestBodySchema).valid) {
   //   next(new Error('INVALID_API_FORMAT'));
   // }
+  console.log('start post request', req.body);
 
-  const food = newFood(req.body.text);
+  const food = newFood(req.body);
 
   console.log(food);
 
-  db
-    .get('food')
+  db.get('food')
     .push(food)
     .write();
 
@@ -114,16 +110,13 @@ router.delete('/:id', (req, res) => {
     .get('food')
     .find({ id: req.params.id });
 
-  db
-    .get('diet')
-    .forEach(item => {
-      item.food.splice(item.food.indexOf(foodItem.value()), 1);
-    })
-    .write();
-
-  db
-    .get('food')
-    .remove(foodItem)
+  // db.get('diet')
+  //   .forEach(item => {
+  //     item.food.splice(item.food.indexOf(foodItem.value()), 1);
+  //   })
+  //   .write();
+  db.get('food')
+    .remove({ id: req.params.id })
     .write();
 
   res.json({ status: 'OK' });

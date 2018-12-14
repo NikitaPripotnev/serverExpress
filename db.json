@@ -28,36 +28,36 @@
       "text": "Овсянка"
     },
     {
-      "id": "3asdq223r121",
+      "id": "efb24441ace5",
       "name": "Test",
-      "cal": "10000",
-      "prot": "1000",
-      "carb": "7000",
-      "fat": "0.500",
-      "text": "ТестыТестыТесты ТестыТестыТесты ТестыТестыТесты ТестыТестыТесты ТестыТестыТестыТесты"
+      "cal": "123",
+      "prot": "123",
+      "fat": "2",
+      "carb": "23",
+      "info": "TestTestTest TestTestTest TestTestTest TestTestTest"
+    },
+    {
+      "id": "68f1a7d8fdbfb",
+      "name": "Огурец",
+      "cal": "1",
+      "prot": "2",
+      "fat": "3",
+      "carb": "4",
+      "info": "Огурец Огурец Огурец Огурец"
     }
   ],
   "diet": [
     {
       "id": "diet1",
-      "food": [
-        "1",
-        "2"
-      ]
+      "food": []
     },
     {
       "id": "diet2",
-      "food": [
-        "1",
-        "2",
-        "3"
-      ]
+      "food": []
     },
     {
       "id": "diet0",
-      "food": [
-        "1"
-      ]
+      "food": []
     }
   ]
 }
