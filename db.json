@@ -3,47 +3,83 @@
     {
       "id": "1",
       "name": "Яблоко",
-      "cal": "20",
+      "cal": "202",
       "prot": "10",
-      "carb": "3",
       "fat": "2",
-      "text": "apple"
+      "carb": "13",
+      "info": "Какая-то информация о яблоке"
     },
     {
       "id": "2",
       "name": "Мясо",
       "cal": "200",
       "prot": "20",
-      "carb": "2",
       "fat": "10",
-      "text": "Свинина"
+      "carb": "2",
+      "info": "Свинина"
     },
     {
       "id": "3",
       "name": "Овсянка",
       "cal": "100",
       "prot": "10",
-      "carb": "70",
       "fat": "0.5",
-      "text": "Овсянка"
+      "carb": "70",
+      "info": "Овсянка"
     },
     {
-      "id": "efb24441ace5",
+      "id": "f6c2e439e8248",
       "name": "Test",
-      "cal": "123",
-      "prot": "123",
-      "fat": "2",
-      "carb": "23",
-      "info": "TestTestTest TestTestTest TestTestTest TestTestTest"
-    },
-    {
-      "id": "68f1a7d8fdbfb",
-      "name": "Огурец",
       "cal": "1",
       "prot": "2",
       "fat": "3",
       "carb": "4",
-      "info": "Огурец Огурец Огурец Огурец"
+      "info": "Test Test Test Test Test Test Test Test "
+    },
+    {
+      "id": "fd376eb40910c",
+      "name": "Морковь1",
+      "cal": "1",
+      "prot": "2",
+      "fat": "3",
+      "carb": "4",
+      "info": "Test Test Test Test Test Test Test Test "
+    },
+    {
+      "id": "9006a3c013dc4",
+      "name": "Морковь12",
+      "cal": "1",
+      "prot": "2",
+      "fat": "3",
+      "carb": "4",
+      "info": "Test Test Test Test Test Test Test Test "
+    },
+    {
+      "id": "04361b91d1981",
+      "name": "Свинина",
+      "cal": "123",
+      "prot": "23",
+      "fat": "12",
+      "carb": "14",
+      "info": "Мясо"
+    },
+    {
+      "id": "a6376e56f9e6c",
+      "name": "Печенье",
+      "cal": "200",
+      "prot": "1",
+      "fat": "4",
+      "carb": "66",
+      "info": "Овсяные"
+    },
+    {
+      "id": "fb88adb501279",
+      "name": "Морковка2",
+      "cal": "213",
+      "prot": "123",
+      "fat": "123",
+      "carb": "132",
+      "info": "sf"
     }
   ],
   "diet": [

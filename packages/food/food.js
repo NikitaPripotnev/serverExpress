@@ -28,26 +28,28 @@ router.get('/', (req, res) => {
   res.json({ status: 'OK', data: food });
 });
 
-/*
+
 // GET /food/:id
-router.get('/:id', (req, res) => {
+router.get('/:id', (req, res, next) => {
   const food = db
     .get('food')
     .find({ id: req.params.id })
     .value();
-
-  res.json({ status: 'OK', data: food });
+  if (food) {
+    res.json({ status: 'OK', data: food });
+  } else {
+    next();
+  }
 });
-*/
+
 // GET /food/:name
 router.get('/:name', (req, res) => {
   const food = db
     .get('food')
     .find({ name: req.params.name })
     .value();
-  const foodmass = { food };
 
-  res.json({ status: food ? 'OK' : 'BAD_REQUEST', data: foodmass });
+  res.json({ status: food ? 'OK' : 'BAD_REQUEST', data: food });
 });
 
 // POST /food
