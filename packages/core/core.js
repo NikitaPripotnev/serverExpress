@@ -15,7 +15,7 @@ app.use(cookieParser());
 
 app.use('/api/food', foodRoutes);
 
-app.use('/api/diet', dietRoutes);
+app.use('/api/diets', dietRoutes);
 
 
 app.use((req, res) => {

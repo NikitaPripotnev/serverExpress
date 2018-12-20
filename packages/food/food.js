@@ -28,7 +28,6 @@ router.get('/', (req, res) => {
   res.json({ status: 'OK', data: food });
 });
 
-
 // GET /food/:id
 router.get('/:id', (req, res, next) => {
   const food = db
@@ -108,15 +107,15 @@ router.patch('/:id', (req, res, next) => {
 
 // DELETE /food/:id
 router.delete('/:id', (req, res) => {
-  const foodItem = db
-    .get('food')
-    .find({ id: req.params.id });
-
-  // db.get('diet')
-  //   .forEach(item => {
-  //     item.food.splice(item.food.indexOf(foodItem.value()), 1);
-  //   })
-  //   .write();
+  db.get('diets')
+    .value()
+    .forEach(element => {
+      const index = element.food.map(elem => elem.id).indexOf(req.params.id);
+      if (index >= 0) {
+        element.food.splice(index, 1);
+      }
+    });
+  db.write();
   db.get('food')
     .remove({ id: req.params.id })
     .write();

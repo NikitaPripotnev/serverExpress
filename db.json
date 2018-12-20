@@ -3,113 +3,70 @@
     {
       "id": "1",
       "name": "Яблоко",
-      "cal": "202",
-      "prot": "10",
-      "fat": "2",
-      "carb": "13",
+      "cal": 202,
+      "prot": 10,
+      "fat": 2,
+      "carb": 13,
       "info": "Какая-то информация о яблоке"
     },
     {
       "id": "2",
       "name": "Мясо",
-      "cal": "200",
-      "prot": "20",
-      "fat": "10",
-      "carb": "2",
+      "cal": 200,
+      "prot": 20,
+      "fat": 10,
+      "carb": 2,
       "info": "Свинина"
     },
     {
       "id": "3",
       "name": "Овсянка",
-      "cal": "100",
-      "prot": "10",
-      "fat": "0.5",
-      "carb": "70",
+      "cal": 100,
+      "prot": 10,
+      "fat": 0.5,
+      "carb": 70,
       "info": "Овсянка"
     },
     {
-      "id": "f6c2e439e8248",
-      "name": "Test",
-      "cal": "1",
-      "prot": "2",
-      "fat": "3",
-      "carb": "4",
-      "info": "Test Test Test Test Test Test Test Test "
-    },
-    {
-      "id": "fd376eb40910c",
-      "name": "Морковь1",
-      "cal": "1",
-      "prot": "2",
-      "fat": "3",
-      "carb": "4",
-      "info": "Test Test Test Test Test Test Test Test "
-    },
-    {
       "id": "9006a3c013dc4",
-      "name": "Морковь12",
-      "cal": "1",
-      "prot": "2",
-      "fat": "3",
-      "carb": "4",
+      "name": "Морковь  зрелая",
+      "cal": 1,
+      "prot": 2,
+      "fat": 3,
+      "carb": 4,
       "info": "Test Test Test Test Test Test Test Test "
     },
     {
       "id": "04361b91d1981",
       "name": "Свинина",
-      "cal": "123",
-      "prot": "23",
-      "fat": "12",
-      "carb": "14",
+      "cal": 123,
+      "prot": 23,
+      "fat": 12,
+      "carb": 14,
       "info": "Мясо"
     },
     {
       "id": "a6376e56f9e6c",
       "name": "Печенье",
-      "cal": "200",
-      "prot": "1",
-      "fat": "4",
-      "carb": "66",
+      "cal": 200,
+      "prot": 1,
+      "fat": 4,
+      "carb": 66,
       "info": "Овсяные"
-    },
-    {
-      "id": "fb88adb501279",
-      "name": "Морковка2",
-      "cal": "213",
-      "prot": "123",
-      "fat": "123",
-      "carb": "132",
-      "info": "sf"
     }
   ],
-  "diet": [
+  "diets": [
     {
       "id": "diet1",
       "name": "Белково-углеводная",
       "food": [
         {
-          "id": "1",
-          "grams": "500"
-        },
-        {
           "id": "2",
-          "grams": "400"
+          "grams": 600
         },
         {
           "id": "3",
-          "grams": "600"
-        },
-        {
-          "id": "f6c2e439e8248",
-          "grams": "1000"
-        },
-        {
-          "id": "2",
-          "grams": "200"
-        },
-        {
-          "id": "3",
-          "grams": "100"
+          "grams": 600
         }
       ]
     },
@@ -119,25 +76,49 @@
       "food": [
         {
           "id": "1",
-          "grams": "500"
-        },
-        {
-          "id": "3",
           "grams": "600"
         }
       ]
     },
     {
-      "id": "diet3",
-      "name": "Тестовая",
+      "id": "96467bd76d26f",
+      "name": "Овсяно - яблочная",
       "food": [
         {
           "id": "1",
-          "grams": "500"
+          "grams": "600"
         },
         {
           "id": "3",
-          "grams": "600"
+          "grams": "1000"
+        }
+      ]
+    },
+    {
+      "id": "1efb2443bdecf",
+      "name": "wer",
+      "food": [
+        {
+          "id": "04361b91d1981",
+          "grams": "34"
+        },
+        {
+          "id": "9006a3c013dc4",
+          "grams": "123"
+        }
+      ]
+    },
+    {
+      "id": "3dbd4132b480f",
+      "name": "wer33",
+      "food": [
+        {
+          "id": "a6376e56f9e6c",
+          "grams": "34"
+        },
+        {
+          "id": "04361b91d1981",
+          "grams": "55"
         }
       ]
     }
